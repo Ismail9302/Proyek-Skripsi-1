@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class FragmentHome extends Fragment {
+public class  FragmentHome extends Fragment {
 
     TextView deskripsi;
     ImageView logoAnemia;

@@ -1,5 +1,6 @@
 package com.ismail.cekanemia;
 
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentTransaction fragmentTransaction;
     private CharSequence Title;
     android.support.v7.widget.Toolbar toolbar;
+    boolean DoubleKlikExit = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +99,21 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         //memanggil synstate
         actionBarDrawerToggle.syncState();
+    }
+
+    public void onBackPressed() {
+        if (DoubleKlikExit) {
+            super.onBackPressed();
+            return;
+        }
+        this.DoubleKlikExit = true;
+        Toast.makeText(this, "Tekan tombol kembali lagi untuk keluar", Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                DoubleKlikExit = false;
+            }
+        }, 2000); //delay 2 detik
     }
 
 

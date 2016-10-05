@@ -20,12 +20,12 @@ public class FragmentTentang extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_tentang,container,false);
+        View v = inflater.inflate(R.layout.fragment_tentang, container, false);
 
-        facebook = (ImageButton) rootView.findViewById(R.id.btnfacebook);
-        twitter = (ImageButton) rootView.findViewById(R.id.btntwitter);
-        instagram = (ImageButton) rootView.findViewById(R.id.btninstagram);
-        gmail = (ImageButton) rootView.findViewById(R.id.btngmail);
+        facebook = (ImageButton) v.findViewById(R.id.btnfacebook);
+        twitter = (ImageButton) v.findViewById(R.id.btntwitter);
+        instagram = (ImageButton) v.findViewById(R.id.btninstagram);
+        gmail = (ImageButton) v.findViewById(R.id.btngmail);
 
         facebook.setOnClickListener(new View.OnClickListener() {
 
@@ -75,8 +75,6 @@ public class FragmentTentang extends Fragment {
             }
         });
 
-
-
-        return rootView;
+        return v;
     }
 }
