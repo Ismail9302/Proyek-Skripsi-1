@@ -1,71 +1,31 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/textColorPrimary"
-    tools:context="com.ismail.cekanemia.FragmentInfo">
+    android:layout_height="wrap_content">
 
-    <!-- TODO: Update blank fragment layout -->
 
-    <LinearLayout
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        android:background="#edf0f0"
+        app:tabIndicatorColor="#C51162"
+        app:tabIndicatorHeight="5dip"
+        app:tabSelectedTextColor="#000000"
+        app:tabTextColor="#95A5A6"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="fill"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"/>
 
-        <ImageButton
-            android:id="@+id/buttonImage1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="centerInside"
-            android:layout_weight="1"
-            android:elevation="0dp"
-            android:background="@drawable/anemia_aplastik"
-            android:cropToPadding="false"
-            android:adjustViewBounds="false" />
-
-        <ImageButton
-            android:id="@+id/buttonImage2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/anemia_db"
-            android:scaleType="centerInside" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="fill"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/buttonImage3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/anemia_pk" />
+    </android.support.v4.view.ViewPager>
 
-        <ImageButton
-            android:id="@+id/buttonImage4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/anemia_hemolitik" />
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="fill"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-    </LinearLayout>
 </LinearLayout>

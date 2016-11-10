@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
-    private CharSequence Title;
-    android.support.v7.widget.Toolbar toolbar;
+    android.support.v7.widget.Toolbar mtoolbar;
     boolean DoubleKlikExit = false;
 
     @Override
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer);
-        toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+        mtoolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
 
         //Set Beranda fragment pertama tampil
@@ -56,25 +55,25 @@ public class MainActivity extends AppCompatActivity {
                 if (menuItem.getItemId() == R.id.home) {
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.containerView, new FragmentHome()).commit();
-                    toolbar.setTitle("Home");
+                    mtoolbar.setTitle("Home");
                 }
 
                 if (menuItem.getItemId() == R.id.info) {
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.containerView, new FragmentInfo()).commit();
-                    toolbar.setTitle("Info Anemia");
+                    mtoolbar.setTitle("Info Anemia");
                 }
 
                 if (menuItem.getItemId() == R.id.lokasi) {
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.containerView, new FragmentLokasi()).commit();
-                    toolbar.setTitle("Lokasi Dokter");
+                    mtoolbar.setTitle("Lokasi Dokter");
                 }
 
                 if (menuItem.getItemId() == R.id.tentang) {
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.containerView, new FragmentTentang()).commit();
-                    toolbar.setTitle("Tentang");
+                    mtoolbar.setTitle("Tentang");
                 }
 
                 return false;
@@ -83,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         });
         // Menginisasi Drawer Layout dan ActionBarToggle
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.openDrawer, R.string.closeDrawer){
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,mtoolbar,R.string.openDrawer, R.string.closeDrawer){
             @Override
             public void onDrawerClosed(View drawerView) {
                 // Kode di sini akan merespons setelah drawer menutup disini kita biarkan kosong

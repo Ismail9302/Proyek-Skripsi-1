@@ -1,6 +1,7 @@
 package com.ismail.cekanemia;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,7 +18,7 @@ public class  FragmentHome extends Fragment {
 
     TextView deskripsi;
     ImageView logoAnemia;
-    Button btn_diagnosa;
+    Button btnDiagnosa;
     View DiagnosaUmum;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,9 +28,16 @@ public class  FragmentHome extends Fragment {
 
 
         //inisialisasi Layout
-        DiagnosaUmum = LayoutInflater.from(getActivity()).inflate(R.layout.diagnosa_umum, container, false);
+     //   DiagnosaUmum = LayoutInflater.from(getActivity()).inflate(R.layout.diagnosa_umum, container, false);
 
         //inisialisasi Button dan TextView
+        btnDiagnosa = (Button)v.findViewById(R.id.btn_diagnosa);
+        btnDiagnosa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager().beginTransaction().replace(R.id.containerView, new Diagnosa_umum()).commit();
+            }
+        });
         return v;
     }
 }

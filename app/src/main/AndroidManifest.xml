@@ -42,36 +42,6 @@
             android:name="com.google.android.gms.vision"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".AnemiaHemolitik">
-            <intent-filter>
-                <action android:name="com.ismail.cekanemia.AnemiaHemolitik" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".AnemiaDB">
-            <intent-filter>
-                <action android:name="com.ismail.cekanemia.AnemiaDB" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".AnemiaPK">
-            <intent-filter>
-                <action android:name="com.ismail.cekanemia.AnemiaPK" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".AnemiaAplastik">
-            <intent-filter>
-                <action android:name="com.ismail.cekanemia.AnemiaAplastik" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
